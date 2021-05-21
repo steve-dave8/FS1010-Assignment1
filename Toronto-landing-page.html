@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | Toronto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            background-color: #d5d5d5;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0 5% 3.2rem 5%;
+        }
+
+        h1, 
+        h2 {
+            font-weight: normal;
+        }
+
+        h1 {
+            font-size: 5.1rem;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            color: #5C5C5C;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        /*Gallery*/
+            #sites-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 4rem;
+                width: 88vw;
+            } 
+
+            #sites-gallery img {
+                width: 100%;
+                margin: 0.8rem 0;
+                z-index: 2;
+                vertical-align: middle;
+            }
+
+            .column {
+                flex: 31%;
+                max-width: 33%;
+                margin: 0 0.8rem;
+            }
+
+            /* .img-link {
+                display: contents;
+            } */
+
+            .column > div {
+                position: relative;
+            }
+
+            .img-overlay {
+                position: absolute;
+                top: 0.8rem;
+                color: black;
+                font-size: 1.4rem;
+                text-indent: 1.6rem;
+                width: 100%;
+                height: calc(100% - 1.6rem);
+                background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+                opacity: 0;
+            }
+
+            .img-overlay:hover,
+            .column a:focus {
+                opacity: 1;
+            }
+
+            @media (max-width: 1180px) {
+                .column {
+                    flex: 47.5%;
+                    max-width: 50%;
+                }
+            }
+
+            @media (max-width: 770px) {
+                .column {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+
+        /*Footer*/
+            .fab {
+                font-size: 2.4rem;               
+            }
+
+            footer > a {
+                margin: 0 1.6rem;
+                text-decoration: none;
+                color: black;
+                transition: all 0.3s linear;
+            }
+
+            footer > a:hover,
+            footer > a:focus-visible {
+                color: #2727f5;
+                filter: drop-shadow(3px 4px 2px black);
+                transition: all 0.3s linear;
+                outline: 0;
+            }
+
+            .fa-twitter {
+                margin-left: 0;
+            }      
+    </style>
+
+    <script src="https://kit.fontawesome.com/74b8d29616.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>The City of <span class="bold">Toronto</span></h1>
+    </header>
+
+    <main>
+        <h2>Historical Sites & <span class="bold">More</span></h2>
+
+        <div id="sites-gallery">
+            <div class="column">
+                <div>
+                    <a class="img-link" href="Images-HistoricalSites/city-skyline.jpg" target="_blank">
+                        <img src="Images-HistoricalSites/city-skyline.jpg" alt="Skyline of Toronto city with grey skies">
+                        <div class="img-overlay">
+                            <h3>Toronto</h3>
+                            <p>The Skyline</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="Images-HistoricalSites/old-city-hall.jpg" target="_blank">
+                    <img src="Images-HistoricalSites/old-city-hall.jpg" alt="Toronto's old city hall">
+                </a>
+            </div>
+            <div class="column">
+                <a href="Images-HistoricalSites/cn-tower.jpg" target="_blank">
+                    <img src="Images-HistoricalSites/cn-tower.jpg" alt="Looking up at the CN Tower through power lines from the city streets">
+                </a>
+                <a href="Images-HistoricalSites/rom.jpg" target="_blank">
+                    <img src="Images-HistoricalSites/rom.jpg" alt="An outside view of the glass walls of the Royal Ontario Museum">
+                </a>
+            </div>
+            <div class="column">
+                <a href="Images-HistoricalSites/rogers-center.jpg" target="_blank">
+                    <img src="Images-HistoricalSites/rogers-center.jpg" alt="A bird's eye view of the Rogers Center">
+                </a>
+                <a href="Images-HistoricalSites/new-city-hall.jpg" target="_blank">
+                    <img src="Images-HistoricalSites/new-city-hall.jpg" alt="Looking up at Toronto's new city hall from its base">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://twitter.com/cityoftoronto" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/cityofto" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://ca.linkedin.com/company/city-of-toronto" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/cityofto" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </footer>
+</body>
+</html>
