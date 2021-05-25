@@ -33,6 +33,11 @@
             color: #5C5C5C;
         }
 
+        h3 {
+            padding-left: 1.6rem;
+            font-size: 2.2rem;
+        }
+
         .bold {
             font-weight: bold;
         }
@@ -49,7 +54,6 @@
             #sites-gallery img {
                 width: 100%;
                 margin: 0.8rem 0;
-                z-index: 2;
                 vertical-align: middle;
             }
 
@@ -59,10 +63,6 @@
                 margin: 0 0.8rem;
             }
 
-            /* .img-link {
-                display: contents;
-            } */
-
             .column > div {
                 position: relative;
             }
@@ -71,17 +71,22 @@
                 position: absolute;
                 top: 0.8rem;
                 color: black;
-                font-size: 1.4rem;
-                text-indent: 1.6rem;
                 width: 100%;
                 height: calc(100% - 1.6rem);
-                background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+                background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 50%);
                 opacity: 0;
+                transition: all 0.2s linear;
             }
 
             .img-overlay:hover,
-            .column a:focus {
+            .img-link:focus > .img-overlay {
                 opacity: 1;
+                transition: all 0.3s linear;
+            }
+
+            .img-overlay > p {
+                padding-left: 1.6rem;
+                font-size: 1.8rem;
             }
 
             @media (max-width: 1180px) {
@@ -100,14 +105,14 @@
 
         /*Footer*/
             .fab {
-                font-size: 2.4rem;               
+                font-size: 3rem;               
             }
 
             footer > a {
                 margin: 0 1.6rem;
                 text-decoration: none;
                 color: black;
-                transition: all 0.3s linear;
+                transition: all 0.2s linear;
             }
 
             footer > a:hover,
@@ -145,25 +150,55 @@
                         </div>
                     </a>
                 </div>
-                <a href="Images-HistoricalSites/old-city-hall.jpg" target="_blank">
-                    <img src="Images-HistoricalSites/old-city-hall.jpg" alt="Toronto's old city hall">
-                </a>
+                <div>
+                    <a class="img-link" href="Images-HistoricalSites/old-city-hall.jpg" target="_blank">
+                        <img src="Images-HistoricalSites/old-city-hall.jpg" alt="Toronto's old city hall">
+                        <div class="img-overlay">
+                            <h3>Old City Hall</h3>
+                            <p>The Clock Tower</p>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="column">
-                <a href="Images-HistoricalSites/cn-tower.jpg" target="_blank">
-                    <img src="Images-HistoricalSites/cn-tower.jpg" alt="Looking up at the CN Tower through power lines from the city streets">
-                </a>
-                <a href="Images-HistoricalSites/rom.jpg" target="_blank">
-                    <img src="Images-HistoricalSites/rom.jpg" alt="An outside view of the glass walls of the Royal Ontario Museum">
-                </a>
+                <div>
+                    <a class="img-link" href="Images-HistoricalSites/cn-tower.jpg" target="_blank">
+                        <img src="Images-HistoricalSites/cn-tower.jpg" alt="Looking up at the CN Tower through power lines from the city streets">
+                        <div class="img-overlay">
+                            <h3>The CN Tower</h3>
+                            <p>One of the World's <br>Tallest Towers</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a class="img-link" href="Images-HistoricalSites/rom.jpg" target="_blank">
+                        <img src="Images-HistoricalSites/rom.jpg" alt="An outside view of the glass walls of the Royal Ontario Museum">
+                        <div class="img-overlay">
+                            <h3>Royal Ontario Museum</h3>
+                            <p>Most Visited Museum <br>in Canada</p>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="column">
-                <a href="Images-HistoricalSites/rogers-center.jpg" target="_blank">
-                    <img src="Images-HistoricalSites/rogers-center.jpg" alt="A bird's eye view of the Rogers Center">
-                </a>
-                <a href="Images-HistoricalSites/new-city-hall.jpg" target="_blank">
-                    <img src="Images-HistoricalSites/new-city-hall.jpg" alt="Looking up at Toronto's new city hall from its base">
-                </a>
+                <div>
+                    <a class="img-link" href="Images-HistoricalSites/rogers-center.jpg" target="_blank">
+                        <img src="Images-HistoricalSites/rogers-center.jpg" alt="A bird's eye view of the Rogers Center">
+                        <div class="img-overlay">
+                            <h3>The Rogers Center</h3>
+                            <p>Toronto's Iconic <br>Skydome</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a class="img-link" href="Images-HistoricalSites/new-city-hall.jpg" target="_blank">
+                        <img src="Images-HistoricalSites/new-city-hall.jpg" alt="Looking up at Toronto's new city hall from its base">
+                        <div class="img-overlay">
+                            <h3>Toronto City Hall</h3>
+                            <p>A Brutalist Architecture <br>Masterpiece</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
